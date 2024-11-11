@@ -1,2 +1,2 @@
-# goit-js-hw-02
-My first JS program with if conditions and string functions
+# goit-js-hw-03
+My first JS program with if conditions, string functions and arrays
