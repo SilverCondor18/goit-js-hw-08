@@ -26,7 +26,7 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-images.forEach(image => {
+const galleryItems = images.map(image => {
   const galleryItem = document.createElement("li");
   const imageElement = document.createElement("img");
   const imageDescription = document.createElement("p");
@@ -37,5 +37,7 @@ images.forEach(image => {
   imageDescription.textContent = image.alt;
   galleryItem.append(imageElement);
   galleryItem.append(imageDescription);
-  galleryList.append(galleryItem);
-})
+  return galleryItem;
+});
+
+galleryList.append(...galleryItems);

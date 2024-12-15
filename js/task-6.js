@@ -34,11 +34,13 @@ const handleCreateButtonClick = e => {
     destroyBoxes();
     createBoxes(boxesNumber);
     boxes.append(...renderBoxes);
+    numberControl.value = "";
   }
 };
 
 const handleDestroyButtonClick = e => {
   destroyBoxes();
+  numberControl.value = "";
 }
 
 createButton.addEventListener("click", handleCreateButtonClick);
