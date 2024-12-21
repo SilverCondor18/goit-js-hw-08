@@ -92,7 +92,7 @@ const handleImgClick = event => {
     if (event.target.nodeName !== "IMG") {
         return;
     }
-    
+    event.preventDefault();
     const modalBox = document.createElement("div");
     const modalImg = document.createElement("img");
 
