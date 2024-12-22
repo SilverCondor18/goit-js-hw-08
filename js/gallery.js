@@ -93,15 +93,10 @@ const handleImgClick = event => {
         return;
     }
     event.preventDefault();
-    const modalBox = document.createElement("div");
-    const modalImg = document.createElement("img");
-
-    modalBox.classList.add("modal");
-    modalImg.classList.add("modal-image");
-    modalImg.setAttribute("src", event.target.dataset.source);
-    modalBox.append(modalImg);
-
-    const lightbox = basicLightbox.create(modalBox);
+    const imageSource = event.target.dataset.source;
+    const imageAlt = event.target.getAttribute("alt");
+    const modalContent = `<div class="modal"><img class="modal-image" src="${imageSource}" alt="${imageAlt}"></div>`;
+    const lightbox = basicLightbox.create(modalContent);
 
     lightbox.show();
 };
